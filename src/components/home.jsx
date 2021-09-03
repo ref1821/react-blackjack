@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div className='con'>
             <Nav></Nav>
-            <Link  to='/play/' className="pla">Play</Link>
+            <Link  to='/play' className="pla">Play</Link>
             <Bottom></Bottom>
         </div>
     )
