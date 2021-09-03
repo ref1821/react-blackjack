@@ -193,7 +193,7 @@ class New extends Component {
                     </div>
                 </div>
                 <div className="ng">
-                    <button onClick={()=>this.reload()} className="bnn">New game</button>
+                    <button onClick={()=>this.reload()} className="bnn" id="ngame">New game</button>
                 </div>
             </div>
         )

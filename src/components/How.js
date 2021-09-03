@@ -19,7 +19,7 @@ class How extends Component {
         if (this.state.number===0) {
             this.setState({
                 number: this.state.number+1,
-                text: this.state.text='Take cards until you get 21 or close, if you go ahead you lose',
+                text: this.state.text='Take cards until you get 21 or close, if you go ahead you lose. When you finish taking numbers click on "Finish Game" to compare your numbers with the computer, the one with the higher number that is not higher than 21',
         },
         () => {console.log(this.state.text)})
         }
