@@ -1,0 +1,26 @@
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #222f3e;
+    
+}
+.title{
+    text-align: left;
+    padding-left: 2%;
+    color: #fff;
+}
+.navi{
+    margin-top: 4%;
+    text-align: right;
+}
+.n{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10%;
+    margin-right: 5%;
+    
+    
+}
+.n:hover{
+    color:#8395a7;
+}
