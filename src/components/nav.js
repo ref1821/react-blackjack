@@ -8,13 +8,13 @@ const Nav = () => {
             <h1 className="title">Blackjack</h1>
             <div className="navi">
                 <nav>
-                    <NavLink to="/black/home" className="n">
+                    <NavLink to="/home/" className="n">
                         Home
                     </NavLink>
-                    <NavLink to="/black/games" className="n">
+                    <NavLink to="/games/" className="n">
                         Games
                     </NavLink>
-                    <NavLink to="/black/about" className="n">
+                    <NavLink to="/about/" className="n">
                         About
                     </NavLink>
                 </nav>
