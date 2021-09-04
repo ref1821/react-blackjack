@@ -1,0 +1,13 @@
+.g{
+    height:75vh;
+    align-items:center;
+}
+.l{
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    font-size: 20px;
+    height: 20px;
+    padding: 5px;
+}
