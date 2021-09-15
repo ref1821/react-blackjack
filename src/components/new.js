@@ -181,8 +181,8 @@ class New extends Component {
                     <button onClick={() => this.NN()} className='bnn'>New number</button>
                     <p>{this.state.n}</p>
                 </div>
-                <div>     
-                    <div className='compu'>
+                <div className='compu'>     
+                    <div >
                         <h2 className='letter'>Computer's numbers</h2>
                         <p>Computer's numbers are {this.state.cnum}  and * </p>
                         <p>{this.state.fn}</p>

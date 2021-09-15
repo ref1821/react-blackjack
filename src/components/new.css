@@ -28,3 +28,16 @@
 #ngame{
     margin-bottom: 7%;
 }
+@media screen and (max-width:600px){
+    .person {
+        grid-column: 1/3;
+    }
+    .compu{
+        grid-column: 1/3;
+    }
+}
+@media screen and (max-width:900px){
+    .letter{
+        font-size:28px;
+    }
+}
