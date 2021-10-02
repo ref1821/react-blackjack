@@ -23,9 +23,16 @@ class New extends Component {
         var dnum2=num[Math.floor(Math.random()*num.length)];
         var vnum1 = num[Math.floor(Math.random()*num.length)];
         var vnum2 = num[Math.floor(Math.random()*num.length)];
-
+        function btnToken(c) {
+            c = c
+            return (
+                <p className="visible">{c}</p>
+                )
+        }
+        var dnums=btnToken(dnum)
+        var dnums2=btnToken(dnum2)
         this.state = {
-            n:'',
+            n:'?',
             num:dnum,
             num2:dnum2,
             dnum3: 0,
@@ -39,12 +46,15 @@ class New extends Component {
             fn:'',
             //extras
             no:0,
-            end:""
+            end:"",
+            //para ponerlas como cartas
+            car:[dnums, " ",dnums2]
         }
         
     }
 
     componentDidMount(){
+        
         const as = 1;
         const dos = 2;
         const tres = 3;
@@ -137,7 +147,14 @@ class New extends Component {
         }}
     
     NN(){
+        function btnToken(c) {
+            c = c
+            return (
+                <p className="visible">{c}</p>
+                )
+        }
         if(this.state.no===0){
+        //todos los valores
         const as = 1;
         const dos = 2;
         const tres = 3;
@@ -152,20 +169,26 @@ class New extends Component {
         const reina = 10;
         const rey = 10;
         var num = new Array(as, dos, tres, cuatro, cinco, seis, siete, ocho ,nueve, diez, joto, reina, rey);
+        // empieza la función
         if (this.state.totalUno<=21){
             this.setState({
                 dnum3: num[Math.floor(Math.random()*num.length)],
+                
             },()=>{
+                var dnums3 = btnToken(this.state.dnum3)
+                var arr = [dnums3]
                 this.setState({
-                    n:'your new number is '+this.state.dnum3,
+                    car: this.state.car,
                     totalUno: this.state.totalUno+this.state.dnum3,
-                })})}
+                })
+            console.log(this.state.car)})}
         else if(this.state.qwe===0&&this.state.totalUno>21){
             this.setState({
-                n:this.state.n+' __You lost__',
+                n:this.state.n+' You lost',
                 qwe:this.state.qwe+1
             })
         }}
+        
     }
     reload = () => {
         window.location.reload()
@@ -175,11 +198,11 @@ class New extends Component {
         return (
             <div className="new">
                 <div className="person">
-                    <h2 className='letter'>Your numbers</h2>
-                    <p>Your numbers are {this.state.num} and {this.state.num2}</p>
+                    <h2 className='letter'>Your cards</h2>
+                    <div>{this.state.car}</div>
                     <p className="letter">Total: {this.state.totalUno}</p>
-                    <button onClick={() => this.NN()} className='bnn'>New number</button>
-                    <p>{this.state.n}</p>
+                    <button onClick={() => this.NN()} className='bnn'>New card</button>
+                    
                 </div>
                 <div className='compu'>     
                     <div >
