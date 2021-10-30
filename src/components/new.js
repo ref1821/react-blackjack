@@ -48,7 +48,7 @@ class New extends Component {
             no:0,
             end:"",
             //para ponerlas como cartas
-            car:[dnums, " ",dnums2]
+            car:[dnums, " ",dnums2, "", ]
         }
         
     }
@@ -176,9 +176,9 @@ class New extends Component {
                 
             },()=>{
                 var dnums3 = btnToken(this.state.dnum3)
-                var arr = [dnums3]
+                
                 this.setState({
-                    car: this.state.car,
+                    car: this.state.car ,
                     totalUno: this.state.totalUno+this.state.dnum3,
                 })
             console.log(this.state.car)})}
